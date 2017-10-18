@@ -20,10 +20,3 @@ Llamaremos al directorio del proyecto <dir_proyecto>.
 		5. Reinicia Apache Tomcat. Para ello, desde el directorio <dir_tomcat>/bin lanza los comandos ./shutdown.sh y ./startup.sh.
 		6. Con el navegador, ve a la URL http://localhost:8080/EjemploHTML. Debes ver tu página index.html.
 	
-3. Crea un **Servlet**: 
-	Vamos a crear un Servlet de Tomcat. La documentación técnica está en http://tomcat.apache.org.
-	La documentación del Servlet de JavaEE está en http://docs.oracle.com/javaee/7/api/javax/servlet/http/HttpServlet.html.
-	2. Escribe el programa Servlet.java.
-	3. Compila Servlet.java, pero utiliza las librerías de Apache Tomcat. Para ello, desde <dir_proyecto> ejecuta el comando "javac -classpath <dir_tomcat>/lib/servlet-api.jar Servlet.java". Aparecerá Servlet.class.
-	4. Publica el Servlet: Para ello, vamos a crear un directorio en <dir_tomcat>/webapps con el nombre "EjemploServlet"
-".
