@@ -15,8 +15,21 @@ Llamaremos al directorio del proyecto <dir_proyecto>.
 	3. **Comprueba Apache Tomcat**: Conéctate con tu navegador a la URL http://localhost:8080. Debe aparecer la página de inicio de Apache Tomcat.
 	4. **Crea un Proyecto en Apache Tomcat**: Para ello, 
 		1. En <dir_tomcat>/webapps crea un directorio con el nombre "EjemploHTML".
-		2. En el directorio del proyecto, crea el fichero <dir_proyecto>/tomcat/webapps/EjemploHTML/index.html (tendrás que crear los directorios correspondientes). Haz una página HTML bonita :)
+		2. Crea el fichero <dir_proyecto>/tomcat/webapps/EjemploHTML/index.html (tendrás que crear los directorios correspondientes). Haz una página HTML bonita :)
 		4. Copia el directorio <dir_proyecto>/tomcat/webapps/EjemploHTML a <dir_tomcat>/webapps.
 		5. Reinicia Apache Tomcat. Para ello, desde el directorio <dir_tomcat>/bin lanza los comandos ./shutdown.sh y ./startup.sh.
 		6. Con el navegador, ve a la URL http://localhost:8080/EjemploHTML. Debes ver tu página index.html.
 	
+3. Crea un **Servlet**: 
+	Vamos a crear un Servlet de Tomcat. La documentación técnica está en http://tomcat.apache.org.
+	La documentación del Servlet de JavaEE está en http://docs.oracle.com/javaee/7/api/javax/servlet/http/HttpServlet.html.
+	2. Crea el fichero <dir_proyecto>/src/EjemploServlet/ClaseServlet1.java (tendrás que crear los directorios correspondientes).
+	3. Programa el Servlet...
+	3. Compila <dir_proyecto>/src/EjemploServlet/ClaseServlet1.java, pero utiliza las librerías de Apache Tomcat. Para ello, desde <dir_proyecto>/src/EjemploServlet ejecuta el comando "javac -classpath <dir_tomcat>/lib/servlet-api.jar ClaseServlet1.java". Aparecerá ClaseServlet1.class.
+	4. Crea el fichero <dir_proyecto>/src/EjemploServlet/web.xml.
+	5. **Publica el Servlet**: Para ello, 
+		1. Copia <dir_proyecto>/src/EjemploServlet/ClaseServlet1.java al directorio **<dir_tomcat>/webapps/EjemploServlet/WEB-INF/classes/**. Tendrás que crear los directorios intermedios.
+		2. Crea el fichero <dir_proyecto>/src/EjemploServlet/web.xml y cópialo al directorio **<dir_tomcat>/webapps/EjemploServlet/WEB-INF/**.
+		3. Reinicia Apache Tomcat. Para ello, desde el directorio <dir_tomcat>/bin lanza los comandos ./shutdown.sh y ./startup.sh.
+		4. Comprueba el funcionamiento del Servlet navegando a la URL **http://localhost:8080/EjemploServlet/urlServlet1**. Debe aparecer el mensaje "¡Hola Mundo! - Soy un Servlet".
+".
